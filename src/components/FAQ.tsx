@@ -67,6 +67,31 @@ export default function FAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
+        <Accordion
+          expanded={expanded === 'panel1'}
+          onChange={handleChange('panel1')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              What sports do you have the data for?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              At present, our data covers pre-match, post-match, and live events for Soccer, Volleyball, and Ice Hockey. 
+              Furthermore, we provide pre-match and post-match data for Baseball and Softball. 
+              There is potential for expanding our coverage to include more college sports in the future.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
       </Box>
     </Container>
   );

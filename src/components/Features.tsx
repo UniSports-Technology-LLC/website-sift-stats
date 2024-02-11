@@ -11,6 +11,10 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import adjust from '../assets/features/adjust.png';
+import details from '../assets/features/details.png';
+import favorites from '../assets/features/favorites.png';
+import profile from '../assets/features/profile.png';
 
 const items = [
   {
@@ -18,32 +22,32 @@ const items = [
     title: 'Detailed Information',
     description:
       'We have every information possible and we display it in the most simple way to catch everyhting at the first glance.',
-    imageLight: 'url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/61ad4097492025.5ec64647e743c.jpg")',
-    imageDark: 'url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/61ad4097492025.5ec64647e743c.jpg")',
+    imageLight: `url(${details})`,
+    imageDark: `url(${details})`,
   },
   {
     icon: <StarRounded />,
     title: 'Follow your favorites',
     description:
       'You can select your favorite teams and  quickly access them in the feature. Support your team.',
-    imageLight: 'url("https://assets.materialup.com/uploads/039c280b-4cf2-4188-9c11-5149971666dc/preview.png")',
-    imageDark: 'url("https://assets.materialup.com/uploads/039c280b-4cf2-4188-9c11-5149971666dc/preview.png")',
+    imageLight: `url(${favorites})`,
+    imageDark: `url(${favorites})`,
   },
   {
     icon: <LinkRounded />,
     title: 'Connect your profile',
     description:
       'You are or were a college player? Show yourself and connect your profile to your player profile.',
-    imageLight: 'url("https://assets.materialup.com/uploads/039c280b-4cf2-4188-9c11-5149971666dc/preview.png")',
-    imageDark: 'url("https://assets.materialup.com/uploads/039c280b-4cf2-4188-9c11-5149971666dc/preview.png")',
+    imageLight: `url(${profile})`,
+    imageDark: `url(${profile})`,
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Available on all platforms',
     description:
       'We made sure to develop for everybody. We are availble in all App Stores and Play Stores.',
-    imageLight: 'url("https://airmore.com/wp-content/uploads/2017/07/mirror-android-to-ios-1.jpg")',
-    imageDark: 'url("https://airmore.com/wp-content/uploads/2017/07/mirror-android-to-ios-1.jpg")',
+    imageLight: `url(${adjust})`,
+    imageDark: `url(${adjust})`,
   },
 ];
 
@@ -114,6 +118,7 @@ export default function Features() {
                     ? items[selectedItemIndex].imageLight
                     : items[selectedItemIndex].imageDark,
                 backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
                 minHeight: 280,
               }}
@@ -125,23 +130,6 @@ export default function Features() {
               <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
                 {selectedFeature.description}
               </Typography>
-              {/* <Link
-                color="primary"
-                variant="body2"
-                fontWeight="bold"
-                sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  '& > svg': { transition: '0.2s' },
-                  '&:hover > svg': { transform: 'translateX(2px)' },
-                }}
-              >
-                <span>Learn more</span>
-                <ChevronRightRoundedIcon
-                  fontSize="small"
-                  sx={{ mt: '1px', ml: '2px' }}
-                />
-              </Link> */}
             </Box>
           </Box>
           <Stack
@@ -215,26 +203,6 @@ export default function Features() {
                     >
                       {description}
                     </Typography>
-                    {/* <Link
-                      color="primary"
-                      variant="body2"
-                      fontWeight="bold"
-                      sx={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        '& > svg': { transition: '0.2s' },
-                        '&:hover > svg': { transform: 'translateX(2px)' },
-                      }}
-                      onClick={(event) => {
-                        event.stopPropagation();
-                      }}
-                    >
-                      <span>Learn more</span>
-                      <ChevronRightRoundedIcon
-                        fontSize="small"
-                        sx={{ mt: '1px', ml: '2px' }}
-                      />
-                    </Link> */}
                   </div>
                 </Box>
               </Card>
@@ -262,6 +230,9 @@ export default function Features() {
                 width: 420,
                 height: 500,
                 backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                alignContent: 'center',
+                backgroundPosition: 'center',
                 backgroundImage: (theme) =>
                   theme.palette.mode === 'light'
                     ? items[selectedItemIndex].imageLight

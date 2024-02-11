@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import hero from "../../assets/hero.png";
+import AppStores from './AppStore';
 
 export default function Hero() {
   return (
@@ -54,15 +56,7 @@ export default function Hero() {
             Elevate your college sports experience with intuitive design, ensuring easy access to crucial 
             information and enhancing your engagement with the game.
           </Typography>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            alignSelf="center"
-            spacing={1}
-            useFlexGap
-            sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
-          >
-            {/* <AppStores /> */}
-          </Stack>
+          <AppStores />
         </Stack>
         <Box
           id="image"
@@ -71,11 +65,9 @@ export default function Hero() {
             alignSelf: 'center',
             height: { xs: 200, sm: 700 },
             width: '100%',
-            backgroundImage:
-              theme.palette.mode === 'light'
-                ? 'url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/61ad4097492025.5ec64647e743c.jpg")'
-                : 'url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/61ad4097492025.5ec64647e743c.jpg")',
+            backgroundImage: `url(${hero})`,
             backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
             borderRadius: '10px',
             outline: '1px solid',
             outlineColor:

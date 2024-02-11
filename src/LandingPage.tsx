@@ -8,9 +8,8 @@ import AppAppBar from './components/AppAppBar';
 import FAQ from './components/FAQ';
 import Features from './components/Features';
 import Footer from './components/Footer';
-import Hero from './components/Hero';
+import Hero from './components/Hero/Hero';
 import Highlights from './components/Highlights';
-import Testimonials from './components/Testimonials';
 import getLPTheme from './getLPTheme';
 
 export default function LandingPage() {
@@ -29,8 +28,8 @@ export default function LandingPage() {
       <Box sx={{ bgcolor: 'background.default' }}>
         {/* <LogoCollection /> */}<Divider />
         <Features />
-        <Divider />
-        <Testimonials />
+        {/* <Divider /> */}
+        {/* <Testimonials /> */}
         <Divider />
         <Highlights />
         {/* <Divider /> */}

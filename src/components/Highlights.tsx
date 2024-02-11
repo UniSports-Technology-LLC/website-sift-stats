@@ -1,53 +1,52 @@
-import * as React from 'react';
+import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
+import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
+import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
+import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
+import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import UpdateRoundedIcon from '@mui/icons-material/UpdateRounded';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    icon: <BeenhereRoundedIcon />,
+    title: 'Everything in one place',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+    "Explore college sports like never before, all in one convenient spot."
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    title: 'Built by student-athletes',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      "As former student-athletes, we're crafting something that we would have appreciated having ourselves.",
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
     title: 'Great user experience',
-    description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+    description:  
+    "We keep things simple and clutter-free, avoiding any unnecessary features."
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
+    icon: <UpdateRoundedIcon />,
+    title: 'Stay up-to-date',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      'Stay informed with real-time updates on game scores, player performances, and tournament standings, ensuring you never miss a moment.',
   },
   {
     icon: <SupportAgentRoundedIcon />,
     title: 'Reliable support',
     description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
+      'Count on our responsive customer support, offering assistance when you need it.',
   },
   {
     icon: <QueryStatsRoundedIcon />,
     title: 'Precision in every detail',
     description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
+      'Rest assured with our commitment to data privacy, ensuring that your personal information and usage data are safeguarded with stringent security measures.'
   },
 ];
 
@@ -81,9 +80,9 @@ export default function Highlights() {
             Highlights
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+            Explore why our product stands out: 
+            simplicity, intuiteveness, and user-friendly design. 
+            Enjoy a new way of college sports and precision in every detail.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
