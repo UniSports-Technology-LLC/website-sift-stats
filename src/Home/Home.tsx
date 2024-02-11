@@ -1,32 +1,26 @@
 import { PaletteMode } from '@mui/material';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import * as React from 'react';
+import Footer from '../Components/Footer';
 import AppAppBar from './components/AppAppBar';
 import FAQ from './components/FAQ';
 import Features from './components/Features';
-import Footer from './components/Footer';
 import Hero from './components/Hero/Hero';
 import Highlights from './components/Highlights';
-import getLPTheme from './getLPTheme';
 
-export default function LandingPage() {
-  const [mode, setMode] = React.useState<PaletteMode>('dark');
-  const LPtheme = createTheme(getLPTheme(mode));
+interface AppAppBarProps {
+  mode: PaletteMode;
+  toggleColorMode: () => void;
+}
 
-  const toggleColorMode = () => {
-    setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
-  };
-
+export default function Home({ mode, toggleColorMode }: AppAppBarProps) {
   return (
-    <ThemeProvider theme={LPtheme}>
-      <CssBaseline />
+    <Box>
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
-        {/* <LogoCollection /> */}<Divider />
+        {/* <LogoCollection /> */}
+        <Divider />
         <Features />
         {/* <Divider /> */}
         {/* <Testimonials /> */}
@@ -39,6 +33,6 @@ export default function LandingPage() {
         <Divider />
         <Footer />
       </Box>
-    </ThemeProvider>
+    </Box>
   );
 }

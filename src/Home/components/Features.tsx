@@ -11,10 +11,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import adjust from '../assets/features/adjust.png';
-import details from '../assets/features/details.png';
-import favorites from '../assets/features/favorites.png';
-import profile from '../assets/features/profile.png';
+import { imagePaths } from '../../assets/imagePaths';
 
 const items = [
   {
@@ -22,32 +19,32 @@ const items = [
     title: 'Detailed Information',
     description:
       'We have every information possible and we display it in the most simple way to catch everyhting at the first glance.',
-    imageLight: `url(${details})`,
-    imageDark: `url(${details})`,
+    imageLight: `url(${imagePaths.features.details})`,
+    imageDark: `url(${imagePaths.features.details})`,
   },
   {
     icon: <StarRounded />,
     title: 'Follow your favorites',
     description:
       'You can select your favorite teams and  quickly access them in the feature. Support your team.',
-    imageLight: `url(${favorites})`,
-    imageDark: `url(${favorites})`,
+    imageLight: `url(${imagePaths.features.favorites})`,
+    imageDark: `url(${imagePaths.features.favorites})`,
   },
   {
     icon: <LinkRounded />,
     title: 'Connect your profile',
     description:
       'You are or were a college player? Show yourself and connect your profile to your player profile.',
-    imageLight: `url(${profile})`,
-    imageDark: `url(${profile})`,
+    imageLight: `url(${imagePaths.features.profile})`,
+    imageDark: `url(${imagePaths.features.profile})`,
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Available on all platforms',
     description:
       'We made sure to develop for everybody. We are availble in all App Stores and Play Stores.',
-    imageLight: `url(${adjust})`,
-    imageDark: `url(${adjust})`,
+    imageLight: `url(${imagePaths.features.adjust})`,
+    imageDark: `url(${imagePaths.features.adjust})`,
   },
 ];
 

@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { contactEmail } from '../../Constants/String';
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -62,7 +63,7 @@ export default function FAQ() {
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
               You can reach our customer support team by emailing
-              <Link> support@siftstats.com</Link>
+              <Link> {contactEmail}</Link>
               .
             </Typography>
           </AccordionDetails>

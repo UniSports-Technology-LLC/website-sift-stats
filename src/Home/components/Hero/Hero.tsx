@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import hero from "../../assets/hero.png";
+// import hero from "../../../../assets/hero.png";
+import { imagePaths } from '../../../assets/imagePaths';
 import AppStores from './AppStore';
 
 export default function Hero() {
@@ -65,7 +66,7 @@ export default function Hero() {
             alignSelf: 'center',
             height: { xs: 200, sm: 700 },
             width: '100%',
-            backgroundImage: `url(${hero})`,
+            backgroundImage: `url(${imagePaths.hero})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             borderRadius: '10px',

@@ -1,9 +1,8 @@
-import { Stack } from '@mui/material';
+import { Link, Stack } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-
+import { Link as RouterLink } from 'react-router-dom';
 
 const logoStyle = {
   width: '140px',
@@ -14,7 +13,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://mui.com/">SiftStats&nbsp;</Link>
+      SiftStats&nbsp;
       {new Date().getFullYear()}
     </Typography>
   );
@@ -52,7 +51,7 @@ export default function Footer() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            gap: 4,
+            gap: 5,
             minWidth: { xs: '100%', sm: '60%' },
           }}
         >
@@ -66,57 +65,7 @@ export default function Footer() {
                 alt="logo of sift stats"
               />
             </Box>
-            {/* <Typography variant="body2" fontWeight={600} gutterBottom>
-              Newsletter
-            </Typography>
-            <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe to our newsletter for weekly updates and promotions.
-            </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="outlined-basic"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                inputProps={{
-                  autocomplete: 'off',
-                  ariaLabel: 'Enter your email address',
-                }}
-              />
-              <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
-                Subscribe
-              </Button>
-            </Stack> */}
           </Box>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" fontWeight={600}>
-            Product
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Features
-          </Link>
-          {/* <Link color="text.secondary" href="#">
-            Testimonials
-          </Link> */}
-          <Link color="text.secondary" href="#">
-            Highlights
-          </Link>
-          {/* <Link color="text.secondary" href="#">
-            Pricing
-          </Link> */}
-          <Link color="text.secondary" href="#">
-            FAQs
-          </Link>
         </Box>
         <Box
           sx={{
@@ -128,10 +77,10 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Company
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/aboutUs">
             About us
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/careers">
             Careers
           </Link>
         </Box>
@@ -145,13 +94,13 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Legal
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/terms">
             Terms
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/privacy">
             Privacy
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/contact">
             Contact
           </Link>
         </Box>
@@ -167,13 +116,13 @@ export default function Footer() {
         }}
       >
         <div>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/privacy">
             Privacy Policy
           </Link>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link component={RouterLink} color="text.secondary" to="/terms">
             Terms of Service
           </Link>
           <Copyright />
@@ -188,30 +137,6 @@ export default function Footer() {
           }}
         >
           <PoweredBy />
-          {/* <IconButton
-            color="inherit"
-            href="https://github.com/mui"
-            aria-label="GitHub"
-            sx={{ alignSelf: 'center' }}
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://twitter.com/MaterialUI"
-            aria-label="X"
-            sx={{ alignSelf: 'center' }}
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://www.linkedin.com/company/mui/"
-            aria-label="LinkedIn"
-            sx={{ alignSelf: 'center' }}
-          >
-            <LinkedInIcon />
-          </IconButton> */}
         </Stack>
       </Box>
     </Container>
