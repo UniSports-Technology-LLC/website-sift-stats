@@ -10,10 +10,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { imagePaths } from '../../assets/imagePaths';
 import ToggleColorMode from './ToggleColorMode';
 
 const logoStyle = {
-  width: '140px',
+  width: '50',
   height: 'auto',
   cursor: 'pointer',
 };
@@ -88,9 +89,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
               }}
             >
               <img
-                src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                }
+                src={imagePaths.logo}
                 style={logoStyle}
                 alt="logo of sift stats"
               />

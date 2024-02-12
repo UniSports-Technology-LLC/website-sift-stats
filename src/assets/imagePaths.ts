@@ -1,4 +1,5 @@
 export const imagePaths = {
+    logo: require('./logo.png'),
     hero: require('./hero.png'),
     features: {
         adjust: require('./features/adjust.png'),
