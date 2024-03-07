@@ -22,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home mode={mode} toggleColorMode={toggleColorMode} />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/privacy-app" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
       </BrowserRouter>
