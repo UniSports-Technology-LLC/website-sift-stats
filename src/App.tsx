@@ -2,6 +2,7 @@ import { CssBaseline, PaletteMode, ThemeProvider, createTheme } from '@mui/mater
 import React, { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop';
+import DeleteAccount from './DeleteAccount/Delete';
 import Home from './Home/Home';
 import Privacy from './Privacy/Privacy';
 import Terms from './Terms/Terms';
@@ -41,6 +42,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/privacy-app" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/delete-account" element={<DeleteAccount />} />
           </Routes>
         </BrowserRouter>
       </ModeContext.Provider>

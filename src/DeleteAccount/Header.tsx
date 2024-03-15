@@ -2,9 +2,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-// import hero from "../../../../assets/hero.png";
 
-export default function PrivacyHeader() {
+export default function DeleteAccountHeader() {
   return (
     <Box
       id="hero"
@@ -38,19 +37,7 @@ export default function PrivacyHeader() {
               textAlign: 'center',
             }}
           >
-            Privacy Policy
-          </Typography>
-          <Typography
-            component="h6"
-            variant="h6"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignSelf: 'center',
-              textAlign: 'center',
-            }}
-          >
-            for Mobile Application
+            Account Deletion
           </Typography>
         </Stack>
       </Container>
