@@ -1,5 +1,4 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { PaletteMode } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -10,21 +9,19 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { useContext } from 'react';
+import { ModeContext } from '../../App';
 import { imagePaths } from '../../assets/imagePaths';
 import ToggleColorMode from './ToggleColorMode';
 
 const logoStyle = {
-  width: '50',
+  width: '40',
   height: 'auto',
   cursor: 'pointer',
 };
 
-interface AppAppBarProps {
-  mode: PaletteMode;
-  toggleColorMode: () => void;
-}
-
-function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
+function AppAppBar() {
+  const { mode, toggleColorMode } = useContext(ModeContext);
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -85,14 +82,22 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 display: 'flex',
                 alignItems: 'center',
                 ml: '-18px',
-                px: 0,
+                px: 1,
               }}
             >
-              <img
-                src={imagePaths.logo}
-                style={logoStyle}
-                alt="logo of sift stats"
-              />
+              {mode === 'dark' ?
+                <img
+                  src={imagePaths.icon.dark}
+                  style={logoStyle}
+                  alt="SiftStats Logo"
+                />
+                :
+                <img
+                  src={imagePaths.icon.light}
+                  style={logoStyle}
+                  alt="SiftStats Logo"
+                />
+              }
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}

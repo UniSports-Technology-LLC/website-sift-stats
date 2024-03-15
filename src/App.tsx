@@ -1,11 +1,21 @@
 import { CssBaseline, PaletteMode, ThemeProvider, createTheme } from '@mui/material';
-import React from 'react';
+import React, { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './Components/ScrollToTop';
 import Home from './Home/Home';
 import Privacy from './Privacy/Privacy';
 import Terms from './Terms/Terms';
 import getLPTheme from './getLPTheme';
 
+export type ModeContextType = {
+  mode: PaletteMode;
+  toggleColorMode: () => void;
+};
+
+export const ModeContext = createContext<ModeContextType>({
+  mode: 'dark',
+  toggleColorMode: () => {},
+});
 
 function App() {
   const [mode, setMode] = React.useState<PaletteMode>('dark');
@@ -15,17 +25,25 @@ function App() {
     setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
+  const modeContextValue: ModeContextType = {
+    mode,
+    toggleColorMode,
+  };
+
   return (
     <ThemeProvider theme={LPtheme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home mode={mode} toggleColorMode={toggleColorMode} />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/privacy-app" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-        </Routes>
-      </BrowserRouter>
+      <ModeContext.Provider value={modeContextValue}>
+        <CssBaseline />
+        <BrowserRouter>
+        <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/privacy-app" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+          </Routes>
+        </BrowserRouter>
+      </ModeContext.Provider>
     </ThemeProvider>
   );
 }

@@ -1,5 +1,8 @@
 export const imagePaths = {
-    logo: require('./logo.png'),
+    icon:{
+        light: require('./icon-light.png'),
+        dark: require('./icon-dark.png'),
+    }, 
     hero: require('./hero.png'),
     features: {
         adjust: require('./features/adjust.png'),

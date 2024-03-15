@@ -2,7 +2,9 @@ import { Link, Stack } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { useContext } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { ModeContext } from '../App';
 import { imagePaths } from '../assets/imagePaths';
 
 const logoStyle = {
@@ -29,6 +31,8 @@ function PoweredBy() {
 }
 
 export default function Footer() {
+  const { mode } = useContext(ModeContext);
+
   return (
     <Container
       sx={{
@@ -57,12 +61,21 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <Box sx={{ ml: '-15px' }}>
-              <img
-                src={imagePaths.logo}
-                style={logoStyle}
-                alt="logo of sift stats"
-              />
+            <Box sx={{ ml: '-15px'}}>
+              {mode === 'dark' ?
+                <img
+                  src={imagePaths.icon.dark}
+                  style={logoStyle}
+                  alt="SiftStats Logo"
+                />
+                :
+                <img
+                  src={imagePaths.icon.light}
+                  style={logoStyle}
+                  alt="SiftStats Logo"
+                />
+              }
+              
             </Box>
           </Box>
         </Box>

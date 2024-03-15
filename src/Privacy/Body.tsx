@@ -88,7 +88,7 @@ function Privacy() {
         <Typography variant="h5" >5. Your Rights</Typography>
         <Container>
           <Typography variant="body1" gutterBottom>
-            You have the right to access, update, delete, or transfer your personal information. You may exercise these rights by contacting us at {contactEmail}.
+            You have the right to access, update, delete, or transfer your personal information. You may exercise these rights by contacting us at {contactEmail}. You can also access, update or delete your account and associated personal information through the mobile app.
           </Typography>
         </Container>
         
