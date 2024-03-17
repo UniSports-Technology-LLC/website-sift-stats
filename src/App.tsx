@@ -19,7 +19,7 @@ export const ModeContext = createContext<ModeContextType>({
 });
 
 function App() {
-  const [mode, setMode] = React.useState<PaletteMode>('dark');
+  const [mode, setMode] = React.useState<PaletteMode>('light');
   const LPtheme = createTheme(getLPTheme(mode));
 
   const toggleColorMode = () => {

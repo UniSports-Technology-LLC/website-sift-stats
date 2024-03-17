@@ -1,4 +1,4 @@
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
+import { SearchRounded } from '@mui/icons-material';
 import LinkRounded from '@mui/icons-material/LinkRounded';
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import StarRounded from '@mui/icons-material/StarRounded';
@@ -18,33 +18,29 @@ const items = [
     icon: <QueryStatsRoundedIcon />,
     title: 'Detailed Information',
     description:
-      'We have every information possible and we display it in the most simple way to catch everyhting at the first glance.',
-    imageLight: `url(${imagePaths.features.details})`,
-    imageDark: `url(${imagePaths.features.details})`,
+      'We have all the information and now you do too.',
+    image: `url(${imagePaths.features.details})`,
   },
   {
     icon: <StarRounded />,
-    title: 'Follow your favorites',
+    title: 'Follow Your Favorites',
     description:
-      'You can select your favorite teams and  quickly access them in the feature. Support your team.',
-    imageLight: `url(${imagePaths.features.favorites})`,
-    imageDark: `url(${imagePaths.features.favorites})`,
+      'Select your favorite teams to always follow the action most important to you.',
+    image: `url(${imagePaths.features.home})`,
   },
   {
     icon: <LinkRounded />,
-    title: 'Connect your profile',
+    title: 'Link Your Profile',
     description:
-      'You are or were a college player? Show yourself and connect your profile to your player profile.',
-    imageLight: `url(${imagePaths.features.profile})`,
-    imageDark: `url(${imagePaths.features.profile})`,
+      'You are or were a college athlete? Showcase your college career and link to your player profile.',
+    image: `url(${imagePaths.features.profile})`,
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
+    icon: <SearchRounded />,
+    title: 'Search',
     description:
-      'We made sure to develop for everybody. We are availble in all App Stores and Play Stores.',
-    imageLight: `url(${imagePaths.features.adjust})`,
-    imageDark: `url(${imagePaths.features.adjust})`,
+      'Find any team in the United States within seconds. ',
+    image: `url(${imagePaths.features.search})`,
   },
 ];
 
@@ -70,7 +66,7 @@ export default function Features() {
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              College athletes go to Sift Stats for their information. Here you can see why.
+              Because college sports are meant to be enjoyed, not complicated.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
@@ -110,10 +106,7 @@ export default function Features() {
           >
             <Box
               sx={{
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                backgroundImage: items[selectedItemIndex].image,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
@@ -219,21 +212,22 @@ export default function Features() {
               width: '100%',
               display: { xs: 'none', sm: 'flex' },
               pointerEvents: 'none',
+              background: 'linear-gradient(to bottom, #368bec, #233885)'
             }}
+            
           >
             <Box
+              borderRadius={2}
               sx={{
                 m: 'auto',
-                width: 420,
-                height: 500,
+                width: 208,
+                height: 450,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 alignContent: 'center',
                 backgroundPosition: 'center',
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                backgroundImage: items[selectedItemIndex].image
+                
               }}
             />
           </Card>

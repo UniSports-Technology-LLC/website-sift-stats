@@ -72,6 +72,10 @@ export default function Hero() {
             title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen
+            style={{
+              border: '2px solid #233885', // Example border style
+              borderRadius: '10px', // Example border radius
+            }}
           />
         </Box>
       </Container>

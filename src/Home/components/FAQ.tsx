@@ -87,8 +87,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              At present, our data covers pre-match, post-match, and live events for Soccer, Volleyball, and Ice Hockey. 
-              Furthermore, we provide pre-match and post-match data for Baseball and Softball. 
+              At present, our data covers pre-match and post-match for Soccer, Volleyball, and Ice Hockey. 
+              We are currently working on also integrating live data to enhacne the user experience. 
               There is potential for expanding our coverage to include more college sports in the future.
             </Typography>
           </AccordionDetails>
