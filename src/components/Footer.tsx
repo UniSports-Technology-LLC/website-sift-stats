@@ -61,22 +61,24 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <Box sx={{ ml: '-15px'}}>
-              {mode === 'dark' ?
-                <img
-                  src={imagePaths.icon.dark}
-                  style={logoStyle}
-                  alt="SiftStats Logo"
-                />
-                :
-                <img
-                  src={imagePaths.icon.light}
-                  style={logoStyle}
-                  alt="SiftStats Logo"
-                />
-              }
-              
-            </Box>
+            {mode === 'dark' ?
+              <img
+                src={imagePaths.icon.dark}
+                style={logoStyle}
+                alt="SiftStats Logo"
+                width={500}
+                height={500}
+                
+              />
+              :
+              <img
+                src={imagePaths.icon.light}
+                style={logoStyle}
+                alt="SiftStats Logo"
+                width={500}
+                height={500}
+              />
+            }
           </Box>
         </Box>
         <Box
@@ -89,11 +91,8 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Company
           </Typography>
-          <Link component={RouterLink} color="text.secondary" to="/aboutUs">
+          <Link component={RouterLink} color="text.secondary" to="/about-us">
             About us
-          </Link>
-          <Link component={RouterLink} color="text.secondary" to="/careers">
-            Careers
           </Link>
         </Box>
         <Box
@@ -106,10 +105,10 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Legal
           </Typography>
-          <Link component={RouterLink} color="text.secondary" to="/terms">
+          <Link component={RouterLink} color="text.secondary" to="/terms-website">
             Terms
           </Link>
-          <Link component={RouterLink} color="text.secondary" to="/privacy">
+          <Link component={RouterLink} color="text.secondary" to="/privacy-website">
             Privacy
           </Link>
           <Link component={RouterLink} color="text.secondary" to="/contact">
@@ -128,13 +127,13 @@ export default function Footer() {
         }}
       >
         <div>
-          <Link component={RouterLink} color="text.secondary" to="/privacy">
+          <Link component={RouterLink} color="text.secondary" to="/privacy-website">
             Privacy Policy
           </Link>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
-          <Link component={RouterLink} color="text.secondary" to="/terms">
+          <Link component={RouterLink} color="text.secondary" to="/terms-website">
             Terms of Service
           </Link>
           <Copyright />

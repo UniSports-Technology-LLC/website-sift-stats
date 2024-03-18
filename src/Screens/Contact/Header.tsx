@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-export default function DeleteAccountHeader() {
+export default function ContactHeader() {
   return (
     <Box
       id="hero"
@@ -37,7 +37,7 @@ export default function DeleteAccountHeader() {
               textAlign: 'center',
             }}
           >
-            Account Deletion
+            CONTACT
           </Typography>
         </Stack>
       </Container>
