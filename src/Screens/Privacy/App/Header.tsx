@@ -37,7 +37,7 @@ export default function AppPrivacyHeader() {
               textAlign: 'center',
             }}
           >
-            Privacy Policy
+            PRIVACY POLICY
           </Typography>
           <Typography
             component="h6"

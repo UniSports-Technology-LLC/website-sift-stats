@@ -1,7 +1,7 @@
+import { Container, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+
 
 export default function WebsitePrivacyHeader() {
   return (
@@ -37,7 +37,7 @@ export default function WebsitePrivacyHeader() {
               textAlign: 'center',
             }}
           >
-            Privacy Policy
+            PRIVACY POLICY
           </Typography>
           <Typography
             component="h6"

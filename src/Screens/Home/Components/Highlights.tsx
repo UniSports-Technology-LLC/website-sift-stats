@@ -58,7 +58,7 @@ export default function Highlights() {
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
         color: 'white',
-        bgcolor: '#06090a',
+        bgcolor: '#2541a7',
       }}
     >
       <Container
@@ -82,7 +82,7 @@ export default function Highlights() {
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
             Explore why our product stands out: 
             simplicity, intuiteveness, and user-friendly design. 
-            Enjoy a new way of college sports and precision in every detail.
+            Enjoy a new way of experiencing college sports and precision in every detail.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
@@ -100,7 +100,7 @@ export default function Highlights() {
                   border: '1px solid',
                   borderColor: 'grey.800',
                   background: 'transparent',
-                  backgroundColor: 'grey.900',
+                  backgroundColor: '#1a2351',
                 }}
               >
                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>

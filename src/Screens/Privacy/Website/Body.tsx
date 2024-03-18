@@ -1,6 +1,6 @@
-import { Container, Typography } from '@mui/material';
-
-const contactEmail = 'contact@siftstats.com'
+import { Container, Link, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
+import { contactEmail } from '../../../Constants/String';
 
 function WebsitePrivacyBody() {
   return (
@@ -12,7 +12,14 @@ function WebsitePrivacyBody() {
         py: { xs: 8, sm: 10 },
       }}
     >
-        {/* Privacy Policy for SiftStats */}
+        <Typography variant="body1" gutterBottom>
+        To view our Mobile Application Privacy Policy instead,{' '}
+          <Link component={RouterLink} to="/privacy-app">
+            click here
+          </Link>.
+        </Typography>
+        
+        {/* Privacy Policy for SiftStats Website*/}
         <Typography variant="body1" gutterBottom>Effective Date: March 5th, 2024</Typography>
         <Typography variant="body1" gutterBottom>
           Welcome to SiftStats, a service provided by UniSports Technology LLC (“we,” “us,” or “our”). SiftStats is offered as a free app intended for use as is. This Privacy Policy is designed to inform visitors and users of our app ("you") regarding our policies with the collection, use, and disclosure of Personal Information for anyone who decides to use our Service.

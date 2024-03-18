@@ -1,6 +1,6 @@
-import { Container, Typography } from '@mui/material';
-
-const contactEmail = 'contact@siftstats.com'
+import { Container, Link, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
+import { contactEmail } from '../../../Constants/String';
 
 function AppPrivacyBody() {
   return (
@@ -89,6 +89,11 @@ function AppPrivacyBody() {
         <Container>
           <Typography variant="body1" gutterBottom>
             You have the right to access, update, delete, or transfer your personal information. You may exercise these rights by contacting us at {contactEmail}. You can also access, update or delete your account and associated personal information through the mobile app.
+            Detailed information on how to delete your account through the app can be found{' '}
+            <Link component={RouterLink} to="/delete-account">
+              here
+            </Link>
+            .
           </Typography>
         </Container>
         
