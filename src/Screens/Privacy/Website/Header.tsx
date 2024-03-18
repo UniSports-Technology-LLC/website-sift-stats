@@ -2,9 +2,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-// import hero from "../../../../assets/hero.png";
 
-export default function PrivacyHeader() {
+export default function WebsitePrivacyHeader() {
   return (
     <Box
       id="hero"
@@ -50,7 +49,7 @@ export default function PrivacyHeader() {
               textAlign: 'center',
             }}
           >
-            for Mobile Application
+            for Website
           </Typography>
         </Stack>
       </Container>

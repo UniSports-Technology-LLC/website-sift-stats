@@ -12,7 +12,7 @@ import * as React from 'react';
 import { useContext } from 'react';
 import { ModeContext } from '../../App';
 import { imagePaths } from '../../assets/imagePaths';
-import ToggleColorMode from './ToggleColorMode';
+import ToggleColorMode from './Components/ToggleColorMode';
 
 const logoStyle = {
   width: '40',

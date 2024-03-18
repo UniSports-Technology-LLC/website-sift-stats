@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-// import hero from "../../../../assets/hero.png";
 import AppStores from './AppStore';
 
 export default function Hero() {
@@ -30,8 +29,8 @@ export default function Hero() {
       >
         <Stack spacing={2} useFlexGap sx={{ width: { xs: '100%', sm: '70%' } }}>
           <Typography
-            component="h1"
-            variant="h1"
+            component="h2"
+            variant="h2"
             sx={{
               display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
@@ -39,16 +38,16 @@ export default function Hero() {
               textAlign: 'center',
             }}
           >
-            College Sports&nbsp;
+            COLLEGE SPORTS&nbsp;
             <Typography
               component="span"
-              variant="h1"
+              variant="h2"
               sx={{
                 color: (theme) =>
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
               }}
             >
-              Made Simple
+              MADE SIMPLE
             </Typography>
           </Typography>
           <Typography variant="body1" textAlign="center" color="text.secondary">
@@ -73,8 +72,8 @@ export default function Hero() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen
             style={{
-              border: '2px solid #233885', // Example border style
-              borderRadius: '10px', // Example border radius
+              border: '2px solid #233885',
+              borderRadius: '10px',
             }}
           />
         </Box>

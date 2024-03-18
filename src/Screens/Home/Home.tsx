@@ -1,11 +1,11 @@
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import Footer from '../Components/Footer';
-import AppAppBar from './components/AppAppBar';
-import FAQ from './components/FAQ';
-import Features from './components/Features';
-import Hero from './components/Hero/Hero';
-import Highlights from './components/Highlights';
+import Footer from '../../Components/Footer';
+import AppAppBar from './AppBar';
+import FAQ from './Components/FAQ';
+import Features from './Components/Features';
+import Hero from './Components/Hero/Hero';
+import Highlights from './Components/Highlights';
 
 export default function Home() {
   return (

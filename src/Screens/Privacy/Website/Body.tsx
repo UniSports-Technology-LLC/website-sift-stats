@@ -2,7 +2,7 @@ import { Container, Typography } from '@mui/material';
 
 const contactEmail = 'contact@siftstats.com'
 
-function PrivacyBody() {
+function WebsitePrivacyBody() {
   return (
     <Container
       sx={{
@@ -170,4 +170,4 @@ function PrivacyBody() {
   );
 }
 
-export default PrivacyBody;
+export default WebsitePrivacyBody;

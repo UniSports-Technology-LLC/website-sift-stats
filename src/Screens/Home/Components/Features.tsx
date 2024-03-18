@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import { imagePaths } from '../../assets/imagePaths';
+import { imagePaths } from '../../../assets/imagePaths';
 
 const items = [
   {
@@ -59,7 +59,7 @@ export default function Features() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Our features
+              OUR FEATURES
             </Typography>
             <Typography
               variant="body1"

@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
-import Footer from '../Components/Footer';
+import Footer from '../../../Components/Footer';
 import PrivacyBody from './Body';
 import PrivacyHeader from './Header';
 
-export default function Privacy() {
+export default function WebsitePrivacy() {
   return (
     <Box>
       <CssBaseline />

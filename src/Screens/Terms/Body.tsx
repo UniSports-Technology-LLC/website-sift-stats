@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import { appName, contactEmail } from '../Constants/String';
+import { appName, contactEmail } from '../../Constants/String';
 
 export default function TermsBody() {
   

@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { contactEmail } from '../../Constants/String';
+import { contactEmail } from '../../../Constants/String';
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -40,7 +40,7 @@ export default function FAQ() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        Frequently asked questions
+        FREQUENTLY ASKED QUESTIONS
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion

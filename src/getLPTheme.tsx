@@ -21,30 +21,30 @@ declare module '@mui/material/styles/createPalette' {
 }
 
 export const brand = {
-  50: '#F0F7FF',
-  100: '#CEE5FD',
-  200: '#9CCCFC',
-  300: '#55A6F6',
-  400: '#0A66C2',
-  500: '#0959AA',
-  600: '#064079',
-  700: '#033363',
-  800: '#02294F',
-  900: '#021F3B',
+  50: '#F1FAFE',
+  100: '#DEF2FC',
+  200: '#C1E6FB',
+  300: '#96D2F8',
+  400: '#68B7F3',
+  500: '#368BEC',
+  600: '#2C6FE2',
+  700: '#2656CF',
+  800: '#2541A7',
+  900: '#233885',
 };
 
-export const secondary = {
-  50: '#F9F0FF',
-  100: '#E9CEFD',
-  200: '#D49CFC',
-  300: '#B355F6',
-  400: '#750AC2',
-  500: '#6709AA',
-  600: '#490679',
-  700: '#3B0363',
-  800: '#2F024F',
-  900: '#23023B',
-};
+// export const secondary = {
+//   50: '#F9F0FF',
+//   100: '#E9CEFD',
+//   200: '#D49CFC',
+//   300: '#B355F6',
+//   400: '#750AC2',
+//   500: '#6709AA',
+//   600: '#490679',
+//   700: '#3B0363',
+//   800: '#2F024F',
+//   900: '#23023B',
+// };
 
 export const gray = {
   50: '#FBFCFE',
@@ -87,16 +87,16 @@ const getDesignTokens = (mode: PaletteMode) => ({
         dark: brand[800],
       }),
     },
-    secondary: {
-      light: secondary[300],
-      main: secondary[500],
-      dark: secondary[800],
-      ...(mode === 'dark' && {
-        light: secondary[400],
-        main: secondary[500],
-        dark: secondary[900],
-      }),
-    },
+    // secondary: {
+    //   light: secondary[300],
+    //   main: secondary[500],
+    //   dark: secondary[800],
+    //   ...(mode === 'dark' && {
+    //     light: secondary[400],
+    //     main: secondary[500],
+    //     dark: secondary[900],
+    //   }),
+    // },
     warning: {
       main: '#F7B538',
       dark: '#F79F00',
@@ -149,23 +149,27 @@ const getDesignTokens = (mode: PaletteMode) => ({
     },
   },
   typography: {
-    fontFamily: ['"Fugaz One", "sans-serif"'].join(','),
+    fontFamily: ['"Inter", "sans-serif"'].join(','),
     h1: {
+      fontFamily: ['"Fugaz One", "sans-serif"'].join(','),
       fontSize: 60,
       fontWeight: 600,
       lineHeight: 78 / 70,
       letterSpacing: -0.2,
     },
     h2: {
+      fontFamily: ['"Fugaz One", "sans-serif"'].join(','),
       fontSize: 48,
       fontWeight: 600,
       lineHeight: 1.2,
     },
     h3: {
+      fontFamily: ['"Fugaz One", "sans-serif"'].join(','),
       fontSize: 42,
       lineHeight: 1.2,
     },
     h4: {
+      fontFamily: ['"Fugaz One", "sans-serif"'].join(','),
       fontSize: 36,
       fontWeight: 500,
       lineHeight: 1.5,

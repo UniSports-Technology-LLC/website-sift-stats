@@ -1,7 +1,6 @@
 import { Button, Stack, alpha } from '@mui/material';
 import Box from '@mui/material/Box';
-import { imagePaths } from '../../../assets/imagePaths';
-import appStoreBadge from '../../../assets/storeBadge/app-store-badge.svg';
+import { imagePaths } from '../../../../assets/imagePaths';
 
 export default function AppStores() {
   return (
@@ -13,6 +12,7 @@ export default function AppStores() {
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
         >
             <Button
+                // TODO: Add App Store Link
                 href='https://apps.apple.com/app/college-soccer-pulse/id6451411546'
             >
                 <Box
@@ -34,7 +34,7 @@ export default function AppStores() {
                     theme.palette.mode === 'light'
                     ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
                     : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
-                    display: 'flex', // Add display: flex
+                    display: 'flex',
                 })}>
                     <Box 
                         sx={() => ({
@@ -42,7 +42,7 @@ export default function AppStores() {
                         justifySelf: 'center',
                         height: { xs: 27, sm: 55 },
                         width: { xs: 90, sm: 180 },
-                        backgroundImage: `url(${appStoreBadge})`,
+                        backgroundImage: `url(${imagePaths.storeBadge.appStore})`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
@@ -52,6 +52,7 @@ export default function AppStores() {
             </Button>
 
             <Button
+                // TODO: Add Android Link
                 href='http://play.google.com/store/search?q=collegesport&c=apps'
             >
                 <Box
