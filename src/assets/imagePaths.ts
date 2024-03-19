@@ -18,5 +18,6 @@ export const imagePaths = {
     storeBadge: {
         googlePlay: require('./storeBadge/google-play-badge.png'),
         appStore: appStoreBadge,
-    }
+    },
+    video: require('./hero-video.mp4')
 }

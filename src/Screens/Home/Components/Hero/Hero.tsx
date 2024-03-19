@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import AppStores from './AppStore';
+import HeroVideo from './Video';
 
 export default function Hero() {
   return (
@@ -56,27 +57,7 @@ export default function Hero() {
           </Typography>
           <AppStores />
         </Stack>
-        <Box
-          sx={() => ({
-            mt: { xs: 8, sm: 10},
-            height: { xs: 200, sm: 500 },
-            width: { xs: '100%', sm: 885 },
-            borderRadius: '10px',
-          })}
-        >
-          <iframe 
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/L-pztpJwIR0?si=rzVUBIp4JNQABAov" 
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-            style={{
-              border: '2px solid #233885',
-              borderRadius: '10px',
-            }}
-          />
-        </Box>
+        <HeroVideo />
       </Container>
     </Box>
   );
