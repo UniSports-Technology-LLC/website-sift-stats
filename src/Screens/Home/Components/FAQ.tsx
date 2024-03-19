@@ -3,7 +3,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
@@ -62,15 +61,15 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing
-              <Link> {contactEmail}</Link>
+              You can reach our customer support team by emailing{' '}
+              <span style={{ color: '#368bec' }}>{contactEmail}</span>
               .
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded === 'panel1'}
-          onChange={handleChange('panel1')}
+          expanded={expanded === 'panel2'}
+          onChange={handleChange('panel2')}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}

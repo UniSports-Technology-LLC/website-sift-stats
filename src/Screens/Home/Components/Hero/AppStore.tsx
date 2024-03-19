@@ -14,6 +14,9 @@ export default function AppStores() {
             <Button
                 // TODO: Add App Store Link
                 href='https://apps.apple.com/app/college-soccer-pulse/id6451411546'
+                style={{
+                    background: 'transparent',
+                }}
             >
                 <Box
                 id="appstore"
@@ -54,6 +57,9 @@ export default function AppStores() {
             <Button
                 // TODO: Add Android Link
                 href='http://play.google.com/store/search?q=collegesport&c=apps'
+                style={{
+                    background: 'transparent',
+                }}
             >
                 <Box
                     id="playstore"

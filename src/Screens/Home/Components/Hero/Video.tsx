@@ -14,6 +14,7 @@ export default function HeroVideo() {
 
     return () => {
       if (videoRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         videoRef.current.removeEventListener('ended', handleVideoEnded);
       }
     };
@@ -52,7 +53,7 @@ export default function HeroVideo() {
                 controls
                 controlsList='nodownload'
                 style={{
-                border: '2px solid #233885',
+                border: '2px solid #368bec',
                 borderRadius: '10px',
                 }}
             >

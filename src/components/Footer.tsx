@@ -7,11 +7,6 @@ import { Link as RouterLink } from 'react-router-dom';
 import { ModeContext } from '../App';
 import { imagePaths } from '../assets/imagePaths';
 
-const logoStyle = {
-  width: '100',
-  height: 'auto',
-};
-
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
@@ -60,23 +55,33 @@ export default function Footer() {
             minWidth: { xs: '100%', sm: '60%' },
           }}
         >
-          <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
+          <Box sx={{ 
+            width: 'auto', 
+            height: { xs: 100, sm: 200 }, 
+            marginX: {xs: 'auto', sm: 0},
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          >
             {mode === 'dark' ?
               <img
-                src={imagePaths.icon.dark}
-                style={logoStyle}
+                src={imagePaths.logo.dark}
                 alt="SiftStats Logo"
-                width={500}
-                height={500}
-                
+                width={'auto'}
+                height={'100%'}
+                style={{
+                  margin: 'auto'
+                }}
               />
               :
               <img
-                src={imagePaths.icon.light}
-                style={logoStyle}
+                src={imagePaths.logo.light}
                 alt="SiftStats Logo"
-                width={500}
-                height={500}
+                width={'auto'}
+                height={'100%'}
+                style={{
+                  margin: 'auto'
+                }}
               />
             }
           </Box>

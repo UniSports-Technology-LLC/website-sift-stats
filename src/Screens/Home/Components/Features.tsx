@@ -19,28 +19,28 @@ const items = [
     title: 'Detailed Information',
     description:
       'We have all the information and now you do too.',
-    image: `url(${imagePaths.features.details})`,
+    image: imagePaths.features.details,
   },
   {
     icon: <StarRounded />,
     title: 'Follow Your Favorites',
     description:
       'Select your favorite teams to always follow the action most important to you.',
-    image: `url(${imagePaths.features.home})`,
+    image: imagePaths.features.home,
   },
   {
     icon: <LinkRounded />,
     title: 'Link Your Profile',
     description:
       'You are or were a college athlete? Showcase your college career and link to your player profile.',
-    image: `url(${imagePaths.features.profile})`,
+    image: imagePaths.features.profile,
   },
   {
     icon: <SearchRounded />,
     title: 'Search',
     description:
       'Find any team in the United States within seconds. ',
-    image: `url(${imagePaths.features.search})`,
+    image: imagePaths.features.search,
   },
 ];
 
@@ -106,14 +106,22 @@ export default function Features() {
           >
             <Box
               sx={{
-                backgroundImage: items[selectedItemIndex].image,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                minHeight: 280,
+                backgroundColor: "#368bec",
+                paddingY: 2,
               }}
-            />
-            <Box sx={{ px: 2, pb: 2 }}>
+            >
+              <Box
+                sx={{
+                  backgroundImage: `url(${items[selectedItemIndex].image})`,
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  minHeight: 280,
+                  backgroundColor: "#368bec",
+                }}
+              />
+            </Box>
+            <Box sx={{ px: 2, py: 2 }}>
               <Typography color="text.primary" variant="body2" fontWeight="bold">
                 {selectedFeature.title}
               </Typography>
@@ -210,24 +218,20 @@ export default function Features() {
             sx={{
               height: '100%',
               width: '100%',
-              display: { xs: 'none', sm: 'flex' },
+              display: { xs: 'flex', sm: 'flex' },
               pointerEvents: 'none',
-              background: 'linear-gradient(to bottom, #368bec, #233885)'
+              background: 'linear-gradient(to bottom, #368bec, #233885)',
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
-            
           >
-            <Box
-              borderRadius={2}
-              sx={{
-                m: 'auto',
-                width: 208,
-                height: 450,
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                alignContent: 'center',
-                backgroundPosition: 'center',
-                backgroundImage: items[selectedItemIndex].image
-                
+            <img
+              src={items[selectedItemIndex].image}
+              alt="App View"
+              width={'40%'}
+              height={'auto'}
+              style={{
+                borderRadius: 5
               }}
             />
           </Card>

@@ -1,4 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -10,15 +11,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useContext } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { ModeContext } from '../../App';
 import { imagePaths } from '../../assets/imagePaths';
 import ToggleColorMode from './Components/ToggleColorMode';
-
-const logoStyle = {
-  width: '40',
-  height: 'auto',
-  cursor: 'pointer',
-};
 
 function AppAppBar() {
   const { mode, toggleColorMode } = useContext(ModeContext);
@@ -88,14 +84,16 @@ function AppAppBar() {
               {mode === 'dark' ?
                 <img
                   src={imagePaths.icon.dark}
-                  style={logoStyle}
                   alt="SiftStats Logo"
+                  width={40}
+                  height={'auto'}
                 />
                 :
                 <img
                   src={imagePaths.icon.light}
-                  style={logoStyle}
                   alt="SiftStats Logo"
+                  width={40}
+                  height={'auto'}
                 />
               }
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -237,6 +235,26 @@ function AppAppBar() {
                       Sign in
                     </Button>
                   </MenuItem> */}
+                  <MenuItem>
+                    <Link component={RouterLink} color="text.secondary" to="/terms-website">
+                      Terms
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link component={RouterLink} color="text.secondary" to="/privacy-website">
+                      Privacy
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link component={RouterLink} color="text.secondary" to="/contact">
+                      Contact
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link component={RouterLink} color="text.secondary" to="/about-us">
+                      About Us
+                    </Link>
+                  </MenuItem>
                 </Box>
               </Drawer>
             </Box>
