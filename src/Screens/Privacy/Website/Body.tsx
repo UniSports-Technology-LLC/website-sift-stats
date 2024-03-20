@@ -13,7 +13,7 @@ function WebsitePrivacyBody() {
       }}
     >
         <Typography variant="body1" gutterBottom>
-        To view our Mobile Application Privacy Policy instead,{' '}
+          To view our Mobile Application Privacy Policy instead,{' '}
           <Link component={RouterLink} to="/privacy-app">
             click here
           </Link>.

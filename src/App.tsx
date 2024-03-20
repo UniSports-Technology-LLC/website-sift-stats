@@ -8,7 +8,8 @@ import DeleteAccount from './Screens/Delete/Delete';
 import Home from './Screens/Home/Home';
 import AppPrivacy from './Screens/Privacy/App/Privacy';
 import WebsitePrivacy from './Screens/Privacy/Website/Privacy';
-import Terms from './Screens/Terms/Terms';
+import AppTerms from './Screens/Terms/App/Terms';
+import WebsiteTerms from './Screens/Terms/Website/Terms';
 import getLPTheme from './getLPTheme';
 
 export type ModeContextType = {
@@ -44,8 +45,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/privacy-website" element={<WebsitePrivacy />} />
             <Route path="/privacy-app" element={<AppPrivacy />} />
-            <Route path="/terms-website" element={<Terms />} />
-            <Route path="/terms-app" element={<Terms />} />
+            <Route path="/terms-website" element={<WebsiteTerms />} />
+            <Route path="/terms-app" element={<AppTerms />} />
             <Route path="/delete-account" element={<DeleteAccount />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about-us" element={<About />} />

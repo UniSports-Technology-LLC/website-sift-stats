@@ -1,18 +1,17 @@
 import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
-import Footer from '../../Components/Footer';
-import TermsBody from './Body';
-import TermsHeader from './Header';
+import Footer from '../../../Components/Footer';
+import AppTermsBody from './Body';
+import AppTermsHeader from './Header';
 
-export default function Terms() {
-
+export default function WebsiteTerms() {
   return (
     <Box>
       <CssBaseline />
-      <TermsHeader />
+      <AppTermsHeader />
       <Box sx={{ bgcolor: 'background.default' }}>
-        <TermsBody />
+        <AppTermsBody />
         <Divider />
         <Footer />
       </Box>

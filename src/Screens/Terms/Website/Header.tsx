@@ -2,9 +2,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-// import hero from "../../../../assets/hero.png";
 
-export default function TermsHeader() {
+export default function WebsiteTermsHeader() {
   return (
     <Box
       id="hero"
@@ -38,7 +37,19 @@ export default function TermsHeader() {
               textAlign: 'center',
             }}
           >
-            Terms of Service
+            TERMS OF SERVICE
+          </Typography>
+          <Typography
+            component="h6"
+            variant="h6"
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignSelf: 'center',
+              textAlign: 'center',
+            }}
+          >
+            for Website
           </Typography>
         </Stack>
       </Container>
