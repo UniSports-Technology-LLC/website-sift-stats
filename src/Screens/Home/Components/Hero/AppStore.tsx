@@ -12,8 +12,7 @@ export default function AppStores() {
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
         >
             <Button
-                // TODO: Add App Store Link
-                href='https://apps.apple.com/app/college-soccer-pulse/id6451411546'
+                 href='https://apps.apple.com/us/app/siftstats/id6478445493'
                 style={{
                     background: 'transparent',
                 }}
@@ -55,8 +54,7 @@ export default function AppStores() {
             </Button>
 
             <Button
-                // TODO: Add Android Link
-                href='http://play.google.com/store/search?q=collegesport&c=apps'
+                href='https://play.google.com/store/apps/details?id=com.sift.stats'
                 style={{
                     background: 'transparent',
                 }}

@@ -15,15 +15,15 @@ function AboutBody() {
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
           <Typography variant="h5" paragraph>
-            The Person Behinde The App
+            The Person Behind The App
           </Typography>
           <Typography variant="body1" paragraph>
             At the moment, our 'About Us' page is more of an 'About Me' story since I'm flying solo on this exciting venture. 
             Hey there! I'm Jari Polm, the founder and developer behind SiftStats. 
-            Originally born in Germany, I made my way to Central Florida for a Computer Science degree at Rollins College.
+            Originally born in Germany, I made my way to Central Florida for a computer science degree at Rollins College.
           </Typography>
           <Typography variant="body1" paragraph>
-            During my time at Rollins College, I was also a proud member of the Soccer Team, where we came tantalizingly close to reaching the Division 2 Final Four in 2022. 
+            During my time at Rollins College, I was also a proud member of the soccer team, where we came tantalizingly close to reaching the NCAA Division 2 Final Four in 2022. 
             Those four years were incredibly formative, and possibly the best four years of my life so far. 
             SiftStats is only possible because of Rollins College and the wonderful people I met there.        
           </Typography>
@@ -49,8 +49,8 @@ function AboutBody() {
           A Journey of Passion
         </Typography>
         <Typography variant="body1" paragraph>
-          It all started with a simple idea: <strong>Creating a Mobile App for College Soccer</strong>. 
-          The first time this idea popped into my head was in the Summer 2021 after my Sophomore year. I was 
+          It all started with a simple idea: <strong>Creating a mobile app for college soccer</strong>. 
+          The first time this idea popped into my head was in Summer 2021 after my Sophomore year. I was 
           always someone who enjoyed looking at other teams, tracking results standings and statistics. 
           However, this appeared really complicated to me in the United States. My freshmen year I did not even know which teams are in my conference.
         </Typography>
