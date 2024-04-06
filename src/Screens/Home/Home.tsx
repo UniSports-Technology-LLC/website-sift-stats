@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Footer from '../../Components/Footer';
-import AppAppBar from './AppBar';
+import HomeAppBar from './AppBar';
 import FAQ from './Components/FAQ';
 import Features from './Components/Features';
 import Hero from './Components/Hero/Hero';
@@ -10,7 +10,7 @@ import Highlights from './Components/Highlights';
 export default function Home() {
   return (
     <Box>
-      <AppAppBar />
+      <HomeAppBar />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
         {/* <LogoCollection /> */}

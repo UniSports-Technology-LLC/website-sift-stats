@@ -51,12 +51,12 @@ function AboutBody() {
         <Typography variant="body1" paragraph>
           It all started with a simple idea: <strong>Creating a mobile app for college soccer</strong>. 
           The first time this idea popped into my head was in Summer 2021 after my Sophomore year. I was 
-          always someone who enjoyed looking at other teams, tracking results standings and statistics. 
+          always someone who enjoyed looking at other teams, tracking results, standings and statistics. 
           However, this appeared really complicated to me in the United States. My freshmen year I did not even know which teams are in my conference.
         </Typography>
         <Typography variant="body1" paragraph>
           Later on, I realized that all the information I am looking for are scattered across different college or conference websites.
-          From Germany I was used to one simple app where I could look everything app. With improved computer science skills, 
+          From Germany I was used to one simple app where I could look everything up. With improved computer science skills, 
           plenty of highs and lows, and a deeper understanding of the college sports system, I completed the development of a testing version of a college soccer app in May 2023.
         </Typography>
         <Typography variant="body1" paragraph>  

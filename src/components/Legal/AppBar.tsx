@@ -1,41 +1,24 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
+import { AppBar, Link } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useContext } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { ModeContext } from '../../App';
+import ToggleColorMode from '../../Screens/Home/Components/ToggleColorMode';
 import { imagePaths } from '../../assets/imagePaths';
-import ToggleColorMode from './Components/ToggleColorMode';
 
-function HomeAppBar() {
+function LegalAppBar() {
   const { mode, toggleColorMode } = useContext(ModeContext);
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const sectionElement = document.getElementById(sectionId);
-    const offset = 128;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: 'smooth',
-      });
-      setOpen(false);
-    }
   };
 
   return (
@@ -97,45 +80,30 @@ function HomeAppBar() {
                 />
               }
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <MenuItem
-                  onClick={() => scrollToSection('features')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Features
-                  </Typography>
+                <MenuItem>
+                  <Link component={RouterLink} color="text.secondary" to="/">
+                    Home
+                  </Link>
                 </MenuItem>
-                {/* <MenuItem
-                  onClick={() => scrollToSection('testimonials')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Testimonials
-                  </Typography>
-                </MenuItem> */}
-                <MenuItem
-                  onClick={() => scrollToSection('highlights')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Highlights
-                  </Typography>
+                <MenuItem>
+                  <Link component={RouterLink} color="text.secondary" to="/terms-website">
+                    Terms
+                  </Link>
                 </MenuItem>
-                {/* <MenuItem
-                  onClick={() => scrollToSection('pricing')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Pricing
-                  </Typography>
-                </MenuItem> */}
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    FAQ
-                  </Typography>
+                <MenuItem>
+                  <Link component={RouterLink} color="text.secondary" to="/privacy-website">
+                    Privacy
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link component={RouterLink} color="text.secondary" to="/contact">
+                    Contact
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link component={RouterLink} color="text.secondary" to="/about-us">
+                    About Us
+                  </Link>
                 </MenuItem>
               </Box>
             </Box>
@@ -147,26 +115,6 @@ function HomeAppBar() {
               }}
             >
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-              {/* <Button
-                color="primary"
-                variant="text"
-                size="small"
-                component="a"
-                href="/material-ui/getting-started/templates/sign-in/"
-                target="_blank"
-              >
-                Sign in
-              </Button>
-              <Button
-                color="primary"
-                variant="contained"
-                size="small"
-                component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
-                target="_blank"
-              >
-                Sign up
-              </Button> */}
             </Box>
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
@@ -197,44 +145,11 @@ function HomeAppBar() {
                   >
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
+                  <MenuItem>
+                    <Link component={RouterLink} color="text.secondary" to="/">
+                      Home
+                    </Link>
                   </MenuItem>
-                  {/* <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
-                  </MenuItem> */}
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
-                  </MenuItem>
-                  {/* <MenuItem onClick={() => scrollToSection('pricing')}>
-                    Pricing
-                  </MenuItem> */}
-                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
-                  <Divider />
-                  {/* <MenuItem>
-                    <Button
-                      color="primary"
-                      variant="contained"
-                      component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
-                      target="_blank"
-                      sx={{ width: '100%' }}
-                    >
-                      Sign up
-                    </Button>
-                  </MenuItem> */}
-                  {/* <MenuItem>
-                    <Button
-                      color="primary"
-                      variant="outlined"
-                      component="a"
-                      href="/material-ui/getting-started/templates/sign-in/"
-                      target="_blank"
-                      sx={{ width: '100%' }}
-                    >
-                      Sign in
-                    </Button>
-                  </MenuItem> */}
                   <MenuItem>
                     <Link component={RouterLink} color="text.secondary" to="/terms-website">
                       Terms
@@ -265,4 +180,4 @@ function HomeAppBar() {
   );
 }
 
-export default HomeAppBar;
+export default LegalAppBar;

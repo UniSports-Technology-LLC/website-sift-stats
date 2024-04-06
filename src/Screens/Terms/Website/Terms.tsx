@@ -2,14 +2,14 @@ import { Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Footer from '../../../Components/Footer';
+import LegalHeader from '../../../Components/Legal/Header';
 import AppTermsBody from './Body';
-import AppTermsHeader from './Header';
 
 export default function WebsiteTerms() {
   return (
     <Box>
       <CssBaseline />
-      <AppTermsHeader />
+      <LegalHeader title='TERMS OF SERVICE' subtitle='for Website' />
       <Box sx={{ bgcolor: 'background.default' }}>
         <AppTermsBody />
         <Divider />
