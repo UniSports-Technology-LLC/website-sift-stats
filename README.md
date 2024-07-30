@@ -29,21 +29,6 @@ The domain and DNS records are managed through [Squarespace](https://www.squares
 # Key Features
 
 - **Responsive Design**: The website is designed to be fully responsive, ensuring optimal viewing across various devices, including desktops, tablets, and mobile phones.
-    - See code
-        
-        ```tsx
-        // sx allows to specify different values for different screen sizes
-        <Typography
-          component="h2"
-          variant="h4"
-          color="text.primary"
-          sx={{
-            width: { sm: '100%', md: '60%' },
-            textAlign: { sm: 'left', md: 'center' },
-          }}
-        >
-        ```
-        
 - **User-Friendly Navigation**: Intuitive navigation menus help users easily find the information they need.
 - **Professional Aesthetic**: The MUI Landing Page template provides a polished and modern look, enhancing the professional image of SiftStats.
 - **Theming**: Light and dark mode are offered and made accessible throughout the app using React’s context hook.
